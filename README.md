@@ -37,9 +37,33 @@ $ yarn install
 $ nodemon index.js
 ```
 
+
+
+
 ```
 $ cd movies-app
 $ cd client
+
+.	Now, you need to modify some files. Type vim ./movies-app/client/src/api/index.js.
+.	Then, change the base_url into the following format. Here, replace EC2_IP:3000 with your <instance_ip_address>:3000.
+<img width="981" height="512" alt="image" src="https://github.com/user-attachments/assets/dcdbba16-97ac-4eaf-ab3e-51ccae376b72" />
+
+
+$ cd server
+.	Now, type vim ./movies-app/server/db/index.js.
+.	Next, replace the ip_address with ‘mongo’ as shown in the screenshot below.
+<img width="981" height="404" alt="image" src="https://github.com/user-attachments/assets/96ebb2b3-c5de-4e54-bf88-6df845ca2459" />
+
+. Configure your security groups to open the required ports 80 and 8000.
+
+.	Creating Dockerfiles for client and server applications
+
+.	Create a docker-compose.yml file.
+.	Next, type sudo docker-compose up -d to start the containers.
+.	Then, go to your browser and type the URL http://<ip_address>:8000/. You can see your app up and running.
+
+
+
 $ yarn install
 $ yarn start
 ```
